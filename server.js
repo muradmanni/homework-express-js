@@ -27,9 +27,10 @@ app.get('/api/notes', (req, res) => {
   
 });
 
+//Add new note in db route
 app.post('/api/notes', (req, res) => {
   // Let the client know that their POST request was received
-  res.json(`${req.method} request received`);
+  //res.json(`${req.method} request received`);
 
   const {title, text} = req.body;
   let newNote = {
@@ -43,8 +44,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 const run = async (newNote) => {
-  const res = await readFileAsync('./db/db.json', 'utf8', (err, data) => {
-    console.log("DATA: ", data);
+  let read = await readFileAsync('./db/db.json', 'utf8', (err, data) => {
     
     let noteArrayObject = JSON.parse(data);
     
@@ -54,7 +54,7 @@ const run = async (newNote) => {
       err
         ? console.error(err)
         : console.log(
-            `Review for  has been written to JSON file`
+            `Note has been written to JSON file`
           )
     });
     
@@ -62,7 +62,24 @@ const run = async (newNote) => {
   
 }
 
+app.delete("/api/notes/:id", async (req, res) => {
+  let read = await readFileAsync('./db/db.json', 'utf8', (err, data) => {
+    const idToDelete= req.params.id;
 
+    const oldNoteArrayObject = JSON.parse(data);
+    const newNoteArrayObject = oldNoteArrayObject.filter(note => note.id !== idToDelete)
+    
+
+    fs.writeFile(`./db/db.json`,JSON.stringify(newNoteArrayObject), (err) =>{
+      err
+        ? console.error(err)
+        : console.log(
+            `Note removed from JSON file`
+          )
+    });
+    res.redirect('back');
+  });
+});
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
