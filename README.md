@@ -31,7 +31,7 @@ To start the project, type the above command and server will start running.
 
 Following is the url link to access the deployed application.
 
-https://pacific-ridge-02925.herokuapp.com/notes
+https://pacific-ridge-02925.herokuapp.com/
 
 ## URL (github repository)<a name="urlrepo"></a>
 
