@@ -1,15 +1,14 @@
+![License: MIT License](https://img.shields.io/badge/LICENSE-MIT%20License-green)
 # homework-express-js
 
-![License: MIT License](https://img.shields.io/badge/LICENSE-MIT%20License-green)
-# homework-team-profile-generator
-
 ## Description
-This project will run on node.js and will ask few questions about the team and then generate a runtime html displaying team information.
+This project will run on heroku server and will save notes so that one can organise things and keep track of tasks.
     
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#tests)
+- [URL (deployed application)](#url)
+- [URL (github repository)](#urlrepo)
 - [Screenshot](#screenshot)
 - [WalkthroughVideo](#walkthroughvideo)
 - [License](#license)
@@ -21,30 +20,32 @@ To install type
 
     npm install
 
-![gif showing installation](assets/images/npm-install.gif)
-
 This will install all the dependency modules
       
 ## Usage      
     npm start
 
-To start the project, type the above command and answer the prompts.
-![gif showing project running](assets/images/npm-start.gif)
-      
-## Tests
-    npm run test                    -- this will run all the tests
+To start the project, type the above command and server will start running.
 
-    npm test Employee.test.js       -- this will do the individual test
+## URL (deployed application)<a name="url"></a>
 
-![gif showing project testing](assets/images/npm-tests.gif)
+Following is the url link to access the deployed application.
+
+https://pacific-ridge-02925.herokuapp.com/notes
+
+## URL (github repository)<a name="urlrepo"></a>
+
+Following link is to access the code files using github repository.
+
+https://github.com/muradmanni/homework-express-js
 
 ## Screenshot
 
-![homepage image](assets/images/main-page.jpg)
+![homepage image](public/assets/images/screenshot.jpg)
 
 ## WalkthroughVideo
 
-[![walkthrough video](/assets/images/walk-through-video.jpg)](https://youtu.be/JeWfITy9wck)
+![walkthrough video](public/assets/mp4/walkthroughvideo.mp4)
 
 ## License
 This project is covered under MIT License. 
