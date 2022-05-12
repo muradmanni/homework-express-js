@@ -109,7 +109,7 @@ const handleNewNoteView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
+  if (!noteTitle.value.trim() || !noteText.value.trim() || activeNote.id) {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);

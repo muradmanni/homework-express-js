@@ -21,7 +21,6 @@ app.get('/notes', (req, res) =>
 
 app.get('/api/notes', (req, res) => {
   fs.readFile('./db/db.json', 'utf8', (error, data) => {
-    console.log(data);
     res.status(200).json(JSON.parse(data));
   });
   
@@ -39,12 +38,12 @@ app.post('/api/notes', (req, res) => {
     text: text
   }
 
-  run(newNote);  
+  readAndWrite(newNote);  
   res.redirect('back');
 });
 
-const run = async (newNote) => {
-  let read = await readFileAsync('./db/db.json', 'utf8', (err, data) => {
+  const readAndWrite = async (newNote) => {
+  await readFileAsync('./db/db.json', 'utf8', (err, data) => {
     
     let noteArrayObject = JSON.parse(data);
     
@@ -63,7 +62,7 @@ const run = async (newNote) => {
 }
 
 app.delete("/api/notes/:id", async (req, res) => {
-  let read = await readFileAsync('./db/db.json', 'utf8', (err, data) => {
+  await readFileAsync('./db/db.json', 'utf8', (err, data) => {
     const idToDelete= req.params.id;
 
     const oldNoteArrayObject = JSON.parse(data);
