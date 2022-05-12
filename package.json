@@ -1,10 +1,11 @@
 {
   "name": "homework-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "[\r     {\r         \"title\":\"Test Title\",\r         \"text\":\"Test text\"\r     },\r     {\r         \"title\":\"Test Title 2\",\r         \"text\":\"Test text 2\"\r     }",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
