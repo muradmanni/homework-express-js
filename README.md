@@ -45,7 +45,7 @@ https://github.com/muradmanni/homework-express-js
 
 ## WalkthroughVideo
 
-![walkthrough video](https://github.com/muradmanni/homework-express-js/tree/main/public/assets/mp4/walkthroughvideo.mp4)
+[![walkthrough video](public/assets/images/screenshot.jpg)](https://youtu.be/9EjhEZQHg6U)
 
 ## License
 This project is covered under MIT License. 
